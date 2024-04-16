@@ -1,0 +1,5 @@
+...................The NetFlix GPT................
+
+#1 - Fist Create A React app 
+#2 - Configured Tailwind Css
+#3 - 
