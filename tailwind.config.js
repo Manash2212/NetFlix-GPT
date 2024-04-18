@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    colors: {
+      netRed: "#e50914",
+      formBg: "#000000de",
+      inputBg: "#1f293742",
+      white: "white",
+      lightGray: "#f9fafb1f",
+      grayTranse: "#9ca3af75",
+      blue: "#1e40af",
+    },
   },
   plugins: [],
 };
