@@ -3,7 +3,10 @@
 - Fist Create A React app
 - Configured Tailwind Css
 - Header
-- Login form
+- Login form with Conditional Rendering
+- Sign up form with Conditional Rendering
+- Form Validation
+- useRef Hook
 
 # Features -[Planning]
 

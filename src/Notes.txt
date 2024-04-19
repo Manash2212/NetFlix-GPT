@@ -1,10 +1,20 @@
 ...................The NetFlix GPT................
 
+   🔰Part-1
 #1 - Fist Create A React app 
 #2 - Configured Tailwind Css
-#3 - 
+
+   🔰Part-2
+#3 - Create Body is a Parent Component
+#4 - Set routing part in body
+#5 - Create Login form and set the Header, and also use Conditional Rendaring using UseState, 
+    (By Default you will be Redirecting to Sign In Option and If you click Sign Up Ooption then then the Form will be Changed.)  
+
+   🔰Part-3 (Time - 2.28.0 min time Left)
+#6 - Handleing Form Validation and Using useRef Hooks
+#7 - Using handleButtonClick function to check what will happen if users Press Sign in or Sign Ups button
+#8 - Create utility file inside utils, name : Validate.js, in this file we will be program about form
+     Validating - and if the validate fails then it will give us an Error message.
 
 
 
-
-#Fea
