@@ -3,10 +3,17 @@
 - Fist Create A React app
 - Configured Tailwind Css
 - Header
+- Routing Our App
 - Login form with Conditional Rendering
 - Sign up form with Conditional Rendering
 - Form Validation
 - useRef Hook
+- Firebase SetUp for Using Firebase
+- Authentication for (Sign in / Sign up)
+- Deploying our App to Production
+- installing Redux ToolKit for Storeing the users Data
+- Created Redux Store with userSlice
+-
 
 # Features -[Planning]
 

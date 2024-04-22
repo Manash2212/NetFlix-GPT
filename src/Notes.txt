@@ -15,6 +15,48 @@
 #7 - Using handleButtonClick function to check what will happen if users Press Sign in or Sign Ups button
 #8 - Create utility file inside utils, name : Validate.js, in this file we will be program about form
      Validating - and if the validate fails then it will give us an Error message.
+#9 - Authentication for Sign in / Sign Up
+#10 - Using Google Firebase for Authentication
+#11 - Steps to Deploy our Apps to the Firebase
 
+      - First we have to create an Account into the Firebase
+      - Create a Progect and Install the Required Command (specified)
+      - Come back to the VsCode and try to Login the Firebase
+      - At the Login time we coud have get some Error Like this- 
+         💫C:\Users\Manash\AppData\Roaming\npm\firebase.ps1      
+            cannot be loaded because running scripts is disabled  
+            on this system. For more information, see 
+            about_Execution_Policies at 
+            + ~~~~~~~~
+                + CategoryInfo          : SecurityError: (:) [],
+                + FullyQualifiedErrorId : UnauthorizedAccess
+      - [[ To solve the Error run some Command in terminal
+         1st -  //set-ExecutionPolset-ExecutionPolicy
+         2nd - // Get-ExecutionPolicy
+         3rd - // Get-ExecutionPolicy -list ]]
 
+      - Then again run, **firebase login --no-localhost**
+      - Then Step by step we wll be initialized the firebase with the VsCode
+      - at the configuration time a qustion will be asked for create a new folder by firebase: 
+         : What do you want to use as your public directory?: build
+
+   🔰Part-5 (Time - 1.26.40 min time Left)
+
+#12 - Authentication for Sign Up and Sign In form. 
+#13 - First check teh firebase docs, in there describe it the logic For Sign Up and Sign In.
+#14 - For Sign Up 
+      - We have to import the Sign Up Logic, More import things is there is a line "const auth = getAuth()"
+        which we have to import form firebase/auth.
+      - After Complete the coding, check the user are registered or not in firebase.  
+#15 - For Sign In
+      - the Logic is same.(check Firebase Documentation)
+
+   🔰Part-6 (Time - 1.3.10 min time Left) 
+
+#16 - Deploying our Apps to Firebase
+#17 - Steps to Deploy our App to Firebase 
+      - 1 > Firebase Login
+      - 2 > Firebase init
+      - 3 > Firebase Deploy
+   
 

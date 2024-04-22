@@ -2,6 +2,11 @@ import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import { checkValidData } from "../utils/validate";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -12,15 +17,59 @@ const Login = () => {
   };
   const email = useRef(null);
   const password = useRef(null);
+  // const name = useRef(null);ss
 
   const handleButtonClick = () => {
     // Validate the Form
+    // console.log(email.current.value);
+    // console.log(password.current.value);
+
     const messege = checkValidData(email.current.value, password.current.value);
-    console.log(messege);
     setErrorMessage(messege);
 
-    console.log(email.current.value);
-    console.log(password.current.value);
+    if (messege) return;
+
+    if (!isSignInForm) {
+      // Sign Up Logic
+      createUserWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed up
+          const user = userCredential.user;
+          console.log(user);
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "-" + errorMessage);
+          // ..
+        });
+    } else {
+      // Sign In Logic
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + "_" + errorMessage);
+        });
+    }
+
+    // Sign in  and Sign Up
   };
   return (
     <div className="h-full">
@@ -42,31 +91,31 @@ const Login = () => {
         {!isSignInForm && (
           <div className="isSighnUpOption">
             <input
+              // ref={name}
               type="text"
               placeholder="Full name"
-              className="w-full font-medium mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
+              className="w-full font-medium text-white mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
             />
             <input
               type="text"
               placeholder="Phone number"
-              className="w-full font-medium mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
+              className="w-full font-medium text-white mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
             />
           </div>
         )}
         <input
           ref={email}
-          type="email"
+          type="text"
           placeholder={isSignInForm ? "Email or phone number" : "Email"}
           className="w-full font-medium text-white mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
         />
-        <p className="text-netRed mt-2">{errorMessage}</p>
         <input
           ref={password}
           type="password"
           placeholder="Password"
           className="w-full font-medium text-white mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
         />
-        <p className="text-netRed mt-2">{errorMessage}</p>
+        <p className="text-netRed mt-4">{errorMessage}</p>
         <br />
         <button
           className="w-full p-2 my-2 bg-netRed rounded-md  text-lg font-medium text-white "
