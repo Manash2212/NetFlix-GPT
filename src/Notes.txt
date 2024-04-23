@@ -58,5 +58,9 @@
       - 1 > Firebase Login
       - 2 > Firebase init
       - 3 > Firebase Deploy
+#18 - Now Installing Redux Toolkit and react-redux for storing the user Data.
+#19 - Creatrd userSlice and appStore and Provided the appStore in App.js Component
+#20 - Now to send the data to redux store, we have to dispatch an Action on everytime when sign in or sign Up
+      so, to get Raid of this  
    
 

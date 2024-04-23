@@ -13,7 +13,10 @@
 - Deploying our App to Production
 - installing Redux ToolKit for Storeing the users Data
 - Created Redux Store with userSlice
--
+- Implemeted Profile Dropdown Options.
+- Implemeted Sign Out Features.
+- Update the Profile in Redux Store after a successful Sign Up.
+- Fetch the Movie Data from TMDB Movies.
 
 # Features -[Planning]
 

@@ -1,23 +1,28 @@
 import React, { useRef, useState } from "react";
 import Header from "./Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { checkValidData } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { addUser } from "../utils/userSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
   const email = useRef(null);
   const password = useRef(null);
-  // const name = useRef(null);ss
+  const name = useRef(null);
 
   const handleButtonClick = () => {
     // Validate the Form
@@ -39,6 +44,28 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
+          // After successful login update the user Details.
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/94735446?v=4",
+          })
+            .then(() => {
+              // After updated the profile we can dispatch an action for photoURLBug.!
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              navigate("/browse");
+            })
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error.message);
+            });
           console.log(user);
           // ...
         })
@@ -59,6 +86,7 @@ const Login = () => {
           // Signed in
           const user = userCredential.user;
           console.log(user);
+          navigate("/browse");
 
           // ...
         })
@@ -91,7 +119,7 @@ const Login = () => {
         {!isSignInForm && (
           <div className="isSighnUpOption">
             <input
-              // ref={name}
+              ref={name}
               type="text"
               placeholder="Full name"
               className="w-full font-medium text-white mt-5 px-4 py-4 bg-inputBg border-2 border-white rounded-md"
