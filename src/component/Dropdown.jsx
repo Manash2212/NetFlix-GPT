@@ -9,11 +9,11 @@ import { IoIosHelpCircleOutline } from "react-icons/io";
 const Dropdown = ({ leaveState }) => {
   const navigate = useNavigate();
 
-  const handleNavigator = () => {
+  const handleSignOut = () => {
     signOut(auth)
       .then(() => {
         //  If Sign-out successful then navigate to the Login page.
-        navigate("/");
+        // navigate("/");
       })
       .catch((error) => {
         // An error happened.
@@ -47,7 +47,7 @@ const Dropdown = ({ leaveState }) => {
         <li className="mt-2 w-full border-b border-lightGray"></li>
         <li
           className="hover:border-b-2 border-netRed  w-full text-center pr-2 py-2  text-lg"
-          onClick={handleNavigator}
+          onClick={handleSignOut}
         >
           Sign out
         </li>

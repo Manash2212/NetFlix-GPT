@@ -14,9 +14,11 @@
 - installing Redux ToolKit for Storeing the users Data
 - Created Redux Store with userSlice
 - Implemeted Profile Dropdown Options.
-- Implemeted Sign Out Features.
+- Implemeted Sign Out Features In Dropdown Option .
 - Update the Profile in Redux Store after a successful Sign Up.
-- Fetch the Movie Data from TMDB Movies.
+- BugFix :- Sign Up user displayName and Profile picture updated.
+- BugFix :- If the user is not logged in Redirect /browse to login page or If the user signout from /browse page then the user Redirect to /login page, the user will not be allowed in /browse page untill the user is logged in.
+-
 
 # Features -[Planning]
 

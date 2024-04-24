@@ -61,6 +61,34 @@
 #18 - Now Installing Redux Toolkit and react-redux for storing the user Data.
 #19 - Creatrd userSlice and appStore and Provided the appStore in App.js Component
 #20 - Now to send the data to redux store, we have to dispatch an Action on everytime when sign in or sign Up
-      so, to get Raid of this  
-   
+      so, to get Raid of this.
 
+      🔰Part-7
+
+#21 - Now i have Implemented the Dropdown menu in Header Component
+#22 - At there i have Implemented Sign Out Features. 
+
+
+      🔰Part-8
+
+#23 - Now update the user Details in Redux store after a successful Sign Up or Sign in which Implemented in Login Component.
+#24 - And also use the useSelector Hooks in Header for featching the user Details.
+
+      🔰Part-9 (2nd Video - Building the Core)
+
+#25 - It's Time to Solve some bug in Our App.
+#26 - What is the Bug-1? :- Suppose I'm in Sign in OR Sign Up page, without login i can still access the 
+      /browse page, which i should not be able to access the browse page. 
+#27 - And:- without Sign Out I can still access the Sign In and Sign Up page. Which should not be happen.
+
+#28 - Solution for Bug-1...!
+#29 - as we know onAuthStateChange is a kind of eventListener Which will check always the current user, when it is Sign up or Signed in or signed out , so if we try to nevigate from the onAuthStateChange which is inside useEffect function, we will not be able to do that, because if we nevigate from the onAuthStateChange then function should be inside the <RoterProvider>, so in Body Component ther is no possible to keep stroe this function in <RoterProvider>, so if we nevigate from the onAuthStateChange then we have to keep it a Component which is present in my whole app and it is also in <RoterProvider>,  
+
+#30 - So, as we know the Header Component is present in my whole app as well as, it is inside <RoterProvider>, so we take it out the onAuthStateChange function from Body to Header Component and nevigateing the route form ther only. and we don't need to write seperate logic in Login page and as well as the Sign out function.
+
+
+
+   
+      🔰Part-10 (Unsubscribing onAuthStateChange)
+
+#31 - 
