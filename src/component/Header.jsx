@@ -5,6 +5,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../utils/Redux/userSlice";
 import { useNavigate } from "react-router-dom";
+import { NetflixLogo } from "../utils/constants";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,22 +15,11 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // const handleSignOut = () => {
-  //   signOut(auth)
-  //     .then(() => {
-  //       //  If Sign-out successful then navigate to the Login page.
-  //       // navigate("/");
-  //     })
-  //     .catch((error) => {
-  //       // An error happened.
-  //       navigate("/error");
-  //     });
-  // };
   useEffect(() => {
     //Reason of using UseEffect : - i want to call this function once.
     // Reaseon for using this onAuthStateChanged : - If any user Sign up then this Function will be called,
     //  If any user Sign In then this Function will also be called, If any user Sign Out then this Function will be called also, so all those updates we can do it from one Place
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in or Sign Up
         const { uid, email, displayName, photoURL } = user;
@@ -50,26 +40,22 @@ const Header = () => {
         navigate("/");
       }
     });
+    // This will unSubscribe when "onAuthStateChanged" component unmount.
+    return () => unsubscribe();
   }, []);
 
   return (
     <div className=" absolute flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10">
-      <img
-        className="w-44"
-        src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
-        alt="Netflix-logo"
-      />
+      <img className="w-44" src={NetflixLogo} alt="Netflix-logo" />
 
       {MyUser && (
         <div className="dropDoenMenu">
           <button
             className="btn pt-4 flex items-center gap-2"
             onMouseEnter={() => setIsOpen(true)}
-            // onClick={handleSignOut}
           >
             <img
-              className="w-12 h-12 rounded-full"
-              // src="https://avatars.githubusercontent.com/u/94735446?v=4"
+              className="w-12 h-12 rounded-md"
               src={MyUser.photoURL}
               alt="Profile-img"
             />

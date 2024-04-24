@@ -91,4 +91,9 @@
    
       🔰Part-10 (Unsubscribing onAuthStateChange)
 
-#31 - 
+#31 - why we Unsubscribing the onAuthStateChange? 
+#32 - Ans :- because "onAuthStateChanged" is kind of a eventListener, it works when the Auth is Changed.
+      When the "Header" Component will unload after that it will Unsubscribe the "onAuthStateChanged".
+      That means it will track when the user Sign Up - Sign In OR Sign Out. after that the Component will Unmount.
+      So, if i Unsubscribe the Component it will basically Unmount.
+

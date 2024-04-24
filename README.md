@@ -16,9 +16,10 @@
 - Implemeted Profile Dropdown Options.
 - Implemeted Sign Out Features In Dropdown Option .
 - Update the Profile in Redux Store after a successful Sign Up.
-- BugFix :- Sign Up user displayName and Profile picture updated.
-- BugFix :- If the user is not logged in Redirect /browse to login page or If the user signout from /browse page then the user Redirect to /login page, the user will not be allowed in /browse page untill the user is logged in.
--
+- BugFix1-1 :- Sign Up user displayName and Profile picture updated.
+- BugFix-2 :- If the user is not logged in Redirect /browse to login page or If th e user signout from /browse page then the user Redirect to /login page, the user will not be allowed in /browse page untill the user is logged in.
+- Unsubscribe the onAuthStateChanged callback.
+- Add hardcoded vlaues to the constants files.
 
 # Features -[Planning]
 
