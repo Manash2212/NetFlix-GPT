@@ -1,5 +1,6 @@
-# NETFLIX GPT
+# NETFLIX GPT 💞
 
+- 1st Video 🔆
 - Fist Create A React app
 - Configured Tailwind Css
 - Header
@@ -20,6 +21,13 @@
 - BugFix-2 :- If the user is not logged in Redirect /browse to login page or If th e user signout from /browse page then the user Redirect to /login page, the user will not be allowed in /browse page untill the user is logged in.
 - Unsubscribe the onAuthStateChanged callback.
 - Add hardcoded vlaues to the constants files.
+
+- 2nd Video 🔆
+- Sign up in TMDB app and generate an API and get an Access Token.
+- Fetch the API of Movie List form TMDB and made the API call in Browser Component
+- Create a redux createSlice which is "movieSlice" and add into the appStore.
+- dispatch the redures in Browser Component.
+- Create our custom hooks for nowPlayingMovies
 
 # Features -[Planning]
 

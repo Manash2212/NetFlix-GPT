@@ -97,3 +97,26 @@
       That means it will track when the user Sign Up - Sign In OR Sign Out. after that the Component will Unmount.
       So, if i Unsubscribe the Component it will basically Unmount.
 
+
+      🔰Part-12
+
+#33 - Sign up in TMDB app and generate an API and get an Access Token.
+#34 - Fetch the API of Movie List form TMDB and made the API call in Browser Component.
+#35 - Why does the React.Strictmode render the Application twice.
+      Ans :- React.Strictmode does extra rendering to check some inconsistency between our calls and this only happen in development mode, and it'll throw an error if there is some inconsistency in our Rendaring Cycle.
+
+      🔰Part-13 (Adding Movie data to the Store "movieslice")
+
+#36 - Created a new Redux file which is (movieSlice) and implement the functionality.
+#37 - After that import the movieSlice into the appStore.
+#38 - Then in Browser Component, dispatch the Action("addNowPlayingMovies") and pass the json value.
+
+      🔰Part-14 (Creating our own Castom Hooks) > 2.40 hrs left
+#39 - Create our custom hooks for nowPlayingMovis
+#40 - In Browser Component looking so massy so i decided extract all the functionality from browser component
+      and keep it in the hooks.
+#41 - And we call this hook in Browser Component to make looks cleaner.
+
+      🔰Part-15 (Building Browse Page) >2.34 hrs left
+
+

@@ -3,7 +3,7 @@ import Dropdown from "./Dropdown";
 import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { addUser, removeUser } from "../utils/Redux/userSlice";
+import { addUser, removeUser } from "../Redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import { NetflixLogo } from "../utils/constants";
 
