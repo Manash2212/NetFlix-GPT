@@ -28,6 +28,13 @@
 - Create a redux createSlice which is "movieSlice" and add into the appStore.
 - dispatch the redures in Browser Component.
 - Create our custom hooks for nowPlayingMovies
+- Building the Browse Page
+  - MainContainer
+    - Video Background ✔
+    - Video Title ✔
+  - SecondaryContainer
+    - Movie List \* n
+    - Cards \* n
 
 # Features -[Planning]
 

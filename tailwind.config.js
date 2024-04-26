@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      DM: ["DM Sans", "sans-serif"],
+    },
     colors: {
       netRed: "#e50914",
       formBg: "#000000de",
@@ -12,6 +15,7 @@ module.exports = {
       grayTranse: "#9ca3af75",
       blue: "#1e40af",
       black: "black",
+      alphaWhite: "#bebdbd4d",
     },
   },
   plugins: [],

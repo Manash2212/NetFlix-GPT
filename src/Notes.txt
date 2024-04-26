@@ -119,4 +119,32 @@
 
       🔰Part-15 (Building Browse Page) >2.34 hrs left
 
+#42 - Created MainContainer.js file inside MainContainer Fetch the First Movie from the redux Store.
+#43 - And also created another two Component which is Video Background.js and VideoTitle.js and 
+      pass it to the MainContainer
+
+      🔰Part-16 (Building Video Title(2.20-hrs-left))
+
+#44 -  Passing the props from MainContainer to VideoTitle component
+#45 - created the VideoTitle page and pass the props value.
+
+      🔰Part-16.1 (Video Background(2.07-hrs-left))
+
+#46 - Passing movieId props from MainContainer to VideoBackground component.
+#47 - Fetch teh Video Api from TMDB app, and filtering the Videos Data-type --- "Trailer".
+#48 - and call the function in useEffect hook. 
+#49 - After that we have to pass the video key at the url, so for that i have passed an Action in movieSlice
+      reducer function at movieSlice.js.
+#50 - After that in VideoBackground component we have dispatched the action and pass the reducer function 
+      like - addTrailerVideo and inside that pass the trailer object.
+       Ex : dispatch(addTrailerVideo(trailer))
+#51 - and then using useSelector fetch the trailer object from the Store and 
+      pass the trailer.key to the video url.
+
+      🔰Part-16.2 ( create Custom hook)
+
+#52- Video Background becomes very clumsy after writing such this operation, 
+      so it's better to create a custom hook and place all the functionality and call this hook to the Video background.
+#53 -  
+
 
