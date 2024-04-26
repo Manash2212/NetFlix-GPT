@@ -6,6 +6,7 @@ import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../Redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import { NetflixLogo } from "../utils/constants";
+import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className=" absolute flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10">
+    <div className="absolute flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10">
       <img className="w-44" src={NetflixLogo} alt="Netflix-logo" />
 
       {MyUser && (
@@ -55,11 +56,19 @@ const Header = () => {
             onMouseEnter={() => setIsOpen(true)}
           >
             <img
-              className="w-12 h-12 rounded-md"
+              className="w-8 h-8 rounded-md"
               src={MyUser.photoURL}
               alt="Profile-img"
             />
-            {isOpen ? "▼" : "▲"}
+            {isOpen ? (
+              <span className="text-xl text-white">
+                <GoTriangleUp />
+              </span>
+            ) : (
+              <span className="text-xl text-white">
+                <GoTriangleDown />
+              </span>
+            )}
             {isOpen && <Dropdown leaveState={setIsOpen} />}
           </button>
         </div>

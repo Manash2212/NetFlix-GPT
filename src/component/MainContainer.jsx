@@ -8,13 +8,13 @@ const MainContainer = () => {
   //   This is Called early Returns > "If we try to fetch something before it add to the store"
   if (movies === null) return;
 
-  const mainMovie = movies[2];
+  const mainMovie = movies[4];
   // console.log(mainMovie);
 
   const { original_title, overview, id } = mainMovie;
 
   return (
-    <div>
+    <div className="box-border overflow-hidden">
       <VideoTitle title={original_title} overview={overview} />
       <VideoBackground movieId={id} />
     </div>

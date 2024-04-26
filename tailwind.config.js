@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       DM: ["DM Sans", "sans-serif"],
+      Fugaz: ["Fugaz One", "sans-serif"],
     },
     colors: {
       netRed: "#e50914",
@@ -15,7 +16,7 @@ module.exports = {
       grayTranse: "#9ca3af75",
       blue: "#1e40af",
       black: "black",
-      alphaWhite: "#bebdbd4d",
+      alphaWhite: "#8a8484",
     },
   },
   plugins: [],

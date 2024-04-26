@@ -35,6 +35,10 @@
   - SecondaryContainer
     - Movie List \* n
     - Cards \* n
+- Fetch the data for trailer video.
+- Update the store with Trailer video data.
+- Embeded the Youtube video and make it autoplay and mute.
+- Used Tailwind css to make the MainContainer looks Awesome.
 
 # Features -[Planning]
 

@@ -7,7 +7,7 @@ const Browse = () => {
   // This hook is for Fetching the API and Store it the customHook.
   useNowPlayingMovies();
   return (
-    <div>
+    <div className="">
       <Header />
       <MainContainer />
       <SecondaryContainer />
