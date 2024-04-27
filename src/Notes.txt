@@ -145,6 +145,43 @@
 
 #52- Video Background becomes very clumsy after writing such this operation, 
       so it's better to create a custom hook and place all the functionality and call this hook to the Video background.
-#53 -  
+
+      🔰Part-17 (Video Background setup)
+
+#53 - Fetch the embedded Youtube video data and set in Video Background
+#54 - Styled the video in Background and setup to Autoplay and mute.
+
+      🔰Part-18 (Creating Movie Suggestions List > 59 minutes left)
+
+#55 - Created 2 Components 1st: MoviesList and 2nd: MoviesCard
+#56 - In SecondaryComponent pass the MoviesList.
+#57 - In SecondaryComponent fetch the Movies Data from the Store using useSelector and 
+      pass the Required props to the MoviesList.
+#58 - Fetch the IMG_CDN_API from the TMDB app and store in the constants.js.
+
+#59 - In MoviesList Component with the Help of props > (which is movies Data) i have applied map method to the 
+      movies data with teh MoviesCard Component.
+#60 - And at the right of the Component i use a React Arrow icons which is used to scroll the elements to the x axis. 
+
+#61 - and also fetch the poster path from the movie object and pass it to the MoviesCard
+#61 - In MoviesCard set image sorce file, and it is fetch from the constants.js and which is IMG_CDN_API + poster_path
+      which is the props and get it from the MoviesList.
+
+      🔰Part-19 (Showing Popular movie List on Browse Page > 17 minutes left)
+
+#62 - Fetch the Data Popular Movies Data from TMDB.
+#63 - create a new usePopularMovies castom hook and there fetch the API, 
+#64 - and Create new reducer function in movieSlice > addPopularMovies and store the data of Popular Movies.
+
+      🔰Part-19.1 (Home Work to fetch another movie API'S )
+#65 -  
+
+
+
+
+
+
+
+
 
 

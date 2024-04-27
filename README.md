@@ -27,7 +27,7 @@
 - Fetch the API of Movie List form TMDB and made the API call in Browser Component
 - Create a redux createSlice which is "movieSlice" and add into the appStore.
 - dispatch the redures in Browser Component.
-- Create our custom hooks for nowPlayingMovies
+- Create our custom hooks for nowPlayingMovies.
 - Building the Browse Page
   - MainContainer
     - Video Background ✔
@@ -39,6 +39,12 @@
 - Update the store with Trailer video data.
 - Embeded the Youtube video and make it autoplay and mute.
 - Used Tailwind css to make the MainContainer looks Awesome.
+- Successfully Build the SecondaryComponent.
+- Build MovieList Component.
+- Build MovieCard Component.
+- TMDB IMG_CDN_API.
+- created a usePoplarMovies castom hook.
+- Made the the Browser component looks Realistic.
 
 # Features -[Planning]
 

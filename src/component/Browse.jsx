@@ -3,9 +3,12 @@ import Header from "./Header";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
+import usePopularMovies from "../hooks/usePopularMovies";
 const Browse = () => {
   // This hook is for Fetching the API and Store it the customHook.
   useNowPlayingMovies();
+
+  usePopularMovies();
   return (
     <div className="">
       <Header />
