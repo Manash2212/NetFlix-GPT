@@ -175,7 +175,7 @@
 
       🔰Part-19.1 (Home Work to fetch another movie API'S )
 
-#65 - Create custom hooks for TopRated Movies and Upcoming Movies, display the data to the screen. 
+#65 - Create custom hooks for TopRated Movies and Upcoming Movies, and display the data to the screen. 
 
 
 

@@ -45,7 +45,7 @@
 - TMDB IMG_CDN_API.
 - created a usePoplarMovies castom hook.
 - Made the the Browser component looks Realistic.
-- Create custom hooks for TopRated Movies and Upcoming Movies, display the data to the screen.
+- Create custom hooks for TopRated Movies and Upcoming Movies, and display the data to the screen.
 
 # Features -[Planning]
 
