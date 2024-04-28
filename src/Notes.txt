@@ -174,7 +174,8 @@
 #64 - and Create new reducer function in movieSlice > addPopularMovies and store the data of Popular Movies.
 
       🔰Part-19.1 (Home Work to fetch another movie API'S )
-#65 -  
+
+#65 - Create custom hooks for TopRated Movies and Upcoming Movies, display the data to the screen. 
 
 
 
