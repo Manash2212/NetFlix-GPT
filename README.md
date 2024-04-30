@@ -53,7 +53,7 @@
     - GptSearchBar.js
     - GptMovieSuggetion.js
 - Create new gptSlice in Redux.(if it's True then GptSearch page will be visible and
-  (Main and Secondary Cntainer will be non-visible))
+  (Main and Secondary Container will be non-visible))
 -
 
 # Features -[Planning]

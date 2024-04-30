@@ -179,10 +179,14 @@
 
       🔰Part-21(Building GPT search Pages > 3.59 hrs left)
 
-#66 - 
+#66 - Create a Component with name of GptSearch.js, inside that passed 2 more components with name of 
+      GptSearchBar.js and GptMovieSuggetion.js.
+#67 - After that create a new gptSlice for redux store, so- (If it's true then the GPT Page will be visible and
+       MainContainer and SecondaryContainer will be disible.)
 
       🔰Part-22(Building Multi Language Pages > 3.23 hrs left)
 
+#68 - 
 
 
 

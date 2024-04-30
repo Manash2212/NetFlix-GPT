@@ -5,7 +5,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { addUser, removeUser } from "../Redux/userSlice";
 import { useNavigate } from "react-router-dom";
-import { NetflixLogo } from "../utils/constants";
+import { NetflixLogo, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import { toggleGptSearchView } from "../Redux/gptSlice";
 
@@ -57,6 +57,17 @@ const Header = () => {
       </div>
 
       <div className="flex items-center justify-center">
+        <select className="p-[4px] mr-2 mt-2 rounded-md font-bold outline-none">
+          {SUPPORTED_LANGUAGES.map((item) => (
+            <option
+              key={item.indentifier}
+              value={item.indentifier}
+              className=" font-bold"
+            >
+              {item.name}
+            </option>
+          ))}
+        </select>
         <button
           className="bg-grayTranse text-white py-2 px-4 mr-4 mt-2 rounded-lg"
           onClick={handleGptSearchToggle}
