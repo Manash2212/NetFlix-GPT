@@ -7,6 +7,7 @@ import { addUser, removeUser } from "../Redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import { NetflixLogo } from "../utils/constants";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
+import { toggleGptSearchView } from "../Redux/gptSlice";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,34 +46,48 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
-  return (
-    <div className=" flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10 fixed">
-      <img className="w-44" src={NetflixLogo} alt="Netflix-logo" />
+  const handleGptSearchToggle = () => {
+    dispatch(toggleGptSearchView());
+  };
 
-      {MyUser && (
-        <div className="dropDoenMenu">
-          <button
-            className="btn pt-4 flex items-center gap-2"
-            onMouseEnter={() => setIsOpen(true)}
-          >
-            <img
-              className="w-8 h-8 rounded-md"
-              src={MyUser.photoURL}
-              alt="Profile-img"
-            />
-            {isOpen ? (
-              <span className="text-xl text-white">
-                <GoTriangleUp />
-              </span>
-            ) : (
-              <span className="text-xl text-white">
-                <GoTriangleDown />
-              </span>
-            )}
-            {isOpen && <Dropdown leaveState={setIsOpen} />}
-          </button>
-        </div>
-      )}
+  return (
+    <div className=" flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10 fixed text-center">
+      <div className="img">
+        <img className="w-44" src={NetflixLogo} alt="Netflix-logo" />
+      </div>
+
+      <div className="flex items-center justify-center">
+        <button
+          className="bg-grayTranse text-white py-2 px-4 mr-4 mt-2 rounded-lg"
+          onClick={handleGptSearchToggle}
+        >
+          GPT Search
+        </button>
+        {MyUser && (
+          <div className="">
+            <button
+              className="btn pt-4 flex items-start justify-start gap-2"
+              onMouseEnter={() => setIsOpen(true)}
+            >
+              <img
+                className="w-8 h-8 rounded-md"
+                src={MyUser.photoURL}
+                alt="Profile-img"
+              />
+              {isOpen ? (
+                <span className="text-xl text-white">
+                  <GoTriangleUp />
+                </span>
+              ) : (
+                <span className="text-xl text-white">
+                  <GoTriangleDown />
+                </span>
+              )}
+              {isOpen && <Dropdown leaveState={setIsOpen} />}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

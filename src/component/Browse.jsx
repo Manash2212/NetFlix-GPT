@@ -6,7 +6,10 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcomigMovies from "../hooks/useUpcomigMovies";
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 const Browse = () => {
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   // This hook is for Fetching the API and Store it the customHook.
   useNowPlayingMovies();
 
@@ -18,8 +21,15 @@ const Browse = () => {
   return (
     <div className="">
       <Header />
-      <MainContainer />
-      <SecondaryContainer />
+      {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
+
       {/* 
 
       💫Planning of Making Browse page💫

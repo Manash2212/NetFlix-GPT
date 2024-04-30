@@ -177,6 +177,11 @@
 
 #65 - Create custom hooks for TopRated Movies and Upcoming Movies, and display the data to the screen. 
 
+      🔰Part-21(Building GPT search Pages > 3.59 hrs left)
+
+#66 - 
+
+      🔰Part-22(Building Multi Language Pages > 3.23 hrs left)
 
 
 

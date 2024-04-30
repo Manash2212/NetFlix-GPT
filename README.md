@@ -47,6 +47,15 @@
 - Made the the Browser component looks Realistic.
 - Create custom hooks for TopRated Movies and Upcoming Movies, and display the data to the screen.
 
+- 3rd Video 🔆
+- Bulding GPT Search Page.
+  - GptSearch.js page (Create a new Component inside that create 2more Components)
+    - GptSearchBar.js
+    - GptMovieSuggetion.js
+- Create new gptSlice in Redux.(if it's True then GptSearch page will be visible and
+  (Main and Secondary Cntainer will be non-visible))
+-
+
 # Features -[Planning]
 
 - Login / Sign Up

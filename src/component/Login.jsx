@@ -10,7 +10,7 @@ import {
 import { auth } from "../utils/firebase";
 import { addUser } from "../Redux/userSlice";
 import { useDispatch } from "react-redux";
-import { USER_AVATAR } from "../utils/constants";
+import { Netflix_Background_IMG, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -100,7 +100,7 @@ const Login = () => {
       <div className="absolute ">
         <img
           className="object-cover"
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/9f46b569-aff7-4975-9b8e-3212e4637f16/453ba2a1-6138-4e3c-9a06-b66f9a2832e4/IN-en-20240415-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+          src={Netflix_Background_IMG}
           alt="Netflix Background"
         />
       </div>
