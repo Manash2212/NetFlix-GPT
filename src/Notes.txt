@@ -186,7 +186,14 @@
 
       🔰Part-22(Building Multi Language Pages > 3.23 hrs left)
 
-#68 - 
+#68 - Create Multi-Language features in our app.
+#68 - 1st > Create a languageConstants file in utils folder, in this folder create different types of 
+            language objects.
+      2nd > Create Option menu in header, 
+      3rd > In constants file create a new array of object, and to map the array as a Options in header.
+      4th > After that create configSlice in Redux store.
+      5th > After that in select, pass an onClick Event to fetch the value of option
+      6th > Inside the handleChangeLanguage function dispatch the action and pass the option value. 
 
 
 

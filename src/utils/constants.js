@@ -22,4 +22,5 @@ export const SUPPORTED_LANGUAGES = [
   { indentifier: "en", name: "English" },
   { indentifier: "hindi", name: "Hindi" },
   { indentifier: "spanish", name: "Spanish" },
+  { indentifier: "bengali", name: "Bengali" },
 ];

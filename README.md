@@ -54,7 +54,7 @@
     - GptMovieSuggetion.js
 - Create new gptSlice in Redux.(if it's True then GptSearch page will be visible and
   (Main and Secondary Container will be non-visible))
--
+- (BONUS) Multi-languge features in our App.
 
 # Features -[Planning]
 

@@ -8,12 +8,14 @@ import { useNavigate } from "react-router-dom";
 import { NetflixLogo, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import { toggleGptSearchView } from "../Redux/gptSlice";
+import { changeLanguage } from "../Redux/configSlice";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const MyUser = useSelector((store) => store.user);
   // console.log(MyUser.photoURL);
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -50,6 +52,11 @@ const Header = () => {
     dispatch(toggleGptSearchView());
   };
 
+  const handleChangeLanguage = (e) => {
+    console.log(e.target.value);
+    dispatch(changeLanguage(e.target.value));
+  };
+
   return (
     <div className=" flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10 fixed text-center">
       <div className="img">
@@ -57,22 +64,28 @@ const Header = () => {
       </div>
 
       <div className="flex items-center justify-center">
-        <select className="p-[4px] mr-2 mt-2 rounded-md font-bold outline-none">
-          {SUPPORTED_LANGUAGES.map((item) => (
-            <option
-              key={item.indentifier}
-              value={item.indentifier}
-              className=" font-bold"
-            >
-              {item.name}
-            </option>
-          ))}
-        </select>
+        {showGptSearch && (
+          <select
+            className="p-[4px] mr-2 mt-2 rounded-md font-bold outline-none"
+            onClick={handleChangeLanguage}
+          >
+            {SUPPORTED_LANGUAGES.map((item) => (
+              <option
+                key={item.indentifier}
+                value={item.indentifier}
+                className=" font-bold"
+                onClick={handleChangeLanguage}
+              >
+                {item.name}
+              </option>
+            ))}
+          </select>
+        )}
         <button
-          className="bg-grayTranse text-white py-2 px-4 mr-4 mt-2 rounded-lg"
+          className="bg-lightRed text-white py-2 px-4 mr-4 mt-2 font-bold rounded-lg"
           onClick={handleGptSearchToggle}
         >
-          GPT Search
+          {showGptSearch ? "Home Page" : "GPT Search"}
         </button>
         {MyUser && (
           <div className="">
