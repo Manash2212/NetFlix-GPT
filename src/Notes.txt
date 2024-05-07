@@ -194,6 +194,7 @@
       4th > After that create configSlice in Redux store.
       5th > After that in select, pass an onClick Event to fetch the value of option
       6th > Inside the handleChangeLanguage function dispatch the action and pass the option value. 
+      7th > After that use the useSelector hook to fetch the language value of language option
 
 
 
