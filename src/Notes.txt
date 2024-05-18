@@ -187,7 +187,7 @@
       🔰Part-22(Building Multi Language Pages > 3.23 hrs left)
 
 #68 - Create Multi-Language features in our app.
-#68 - 1st > Create a languageConstants file in utils folder, in this folder create different types of 
+#69 - 1st > Create a languageConstants file in utils folder, in this folder create different types of 
             language objects.
       2nd > Create Option menu in header, 
       3rd > In constants file create a new array of object, and to map the array as a Options in header.
@@ -195,6 +195,19 @@
       5th > After that in select, pass an onClick Event to fetch the value of option
       6th > Inside the handleChangeLanguage function dispatch the action and pass the option value. 
       7th > After that use the useSelector hook to fetch the language value of language option
+
+      🔰Part-23(Adding Gpt Features into our APP.)
+
+#70 - Got the API key from the Open AI. and Store it to the utils. 
+#71 - Install Open AI Packages. 
+#72 - In the OpenAi npm library page there is describe the usage of the openai function, so i import the openai function and create a new utils file name: OpenAi.js and paste the function. 
+#73 - then set onClick even to search button and pass the handleGptSearch function.
+#74 - then get the input value using useRef and pass it to the handleGptSearch function.
+#75 - In handleGptSearch function pass the promise function which is present in the OpenAi npm library.
+#76 - After theat write a proper search quaries and store it in the gptQuery constant. and pass to the 
+      promise function at the content property.
+
+#77 - After that according to the uesr search query the movie list will shown in console 
 
 
 

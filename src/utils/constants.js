@@ -24,3 +24,6 @@ export const SUPPORTED_LANGUAGES = [
   { indentifier: "spanish", name: "Spanish" },
   { indentifier: "bengali", name: "Bengali" },
 ];
+
+export const OPENAI_KEY =
+  "sk-proj-pPDrCNADpqkenizBR2G4T3BlbkFJWOawhsW7C321KkNZXK2k";
