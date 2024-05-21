@@ -207,7 +207,11 @@
 #76 - After theat write a proper search quaries and store it in the gptQuery constant. and pass to the 
       promise function at the content property.
 
-#77 - After that according to the uesr search query the movie list will shown in console 
+#77 - After that according to the uesr search query the movie list will shown in console.
+#78 - To fetch the Details of each movies, i import the async function of search movie from TMDB 
+      and fetch the API to the "ssearchMovieTMDB" function return the json file.
+#79 - after that map on the movies array and pass the "searchMovieTMDB" function. 
+#80 - after that, there is some issue with that so, see the teh GptSearchBar page from line no -58
 
 
 
