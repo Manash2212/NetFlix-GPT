@@ -194,7 +194,7 @@
       4th > After that create configSlice in Redux store.
       5th > After that in select, pass an onClick Event to fetch the value of option
       6th > Inside the handleChangeLanguage function dispatch the action and pass the option value. 
-      7th > After that use the useSelector hook to fetch the language value of language option
+      7th > After that use the useSelector hook to fetch the language value of language option.
 
       🔰Part-23(Adding Gpt Features into our APP.)
 
@@ -212,8 +212,11 @@
       and fetch the API to the "ssearchMovieTMDB" function return the json file.
 #79 - after that map on the movies array and pass the "searchMovieTMDB" function. 
 #80 - after that, there is some issue with that so, see the teh GptSearchBar page from line no -58
-
-
+#81 - after resolve the all Promise, and get the results.
+#82 - Now it's time to push the all results to the gpt redux store. 
+#83 - Create a new reducer name "addGptMovieResult" in gpt slice, and dispatch teh action to the GptSearchBar
+      and in dispatch pass the "addGptMovieResult" inside that pass two parameters inside an object 
+      named :{ movieNames: gptMovies, movieResult: resolvedResult } 
 
 
 

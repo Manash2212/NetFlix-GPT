@@ -1,13 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import lang from "../utils/languageConstants";
 import openai from "../utils/OpenAI";
 import { API_OPTIONS } from "../utils/constants";
+import { addGptMovieResult } from "../Redux/gptSlice";
 
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
   const searchInputData = useRef(null);
-  console.log(langKey);
+  const dispatch = useDispatch(null);
+  // console.log(langKey);
 
   const searchMovieTMDB = async (movie) => {
     const data = await fetch(
@@ -18,13 +20,9 @@ const GptSearchBar = () => {
     );
 
     const json = await data.json();
-    // console.log(json);
 
     return json.results;
   };
-  // useEffect(() => {
-  //   searchMovieTMDB("Rang de basanti");
-  // });
 
   const handleGptSearch = async () => {
     console.log(searchInputData.current.value);
@@ -62,6 +60,10 @@ const GptSearchBar = () => {
     // to Convert all the promise to the result we will be use Promise.all
     const resolvedResult = Promise.all(promiseArray);
     console.log(resolvedResult);
+
+    dispatch(
+      addGptMovieResult({ movieNames: gptMovies, movieResult: resolvedResult })
+    );
   };
   return (
     <div className="bg-formBg rounded-lg  w-1/2  absolute top-[20%] left-[25%]  ">
