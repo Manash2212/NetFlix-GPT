@@ -218,7 +218,12 @@
       and in dispatch pass the "addGptMovieResult" inside that pass two parameters inside an object 
       named :{ movieNames: gptMovies, movieResult: resolvedResult } 
 
+      🔰Part-24(Building GPT Movie Suggestions UI.)
 
+#84 - Import two Actions from the gpt slice named : "movieNames" and "movieResult. 
+#85 - and map on movieNames and Inside that i've reuse the component which is MovieList 
+      and Learn what is reusable component.
+#86 - In MoviesCard some error handleing done, if Poster-path is not present then don't show. 
 
 
 

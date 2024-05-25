@@ -26,4 +26,4 @@ export const SUPPORTED_LANGUAGES = [
 ];
 
 export const OPENAI_KEY =
-  "sk-proj-7WUThngnlCBor5MLRo9FT3BlbkFJSjsHupR918Jf1PUHRB6a";
+  "sk-proj-eYl3WQgSV2kxI3hqvWcPT3BlbkFJ0HJ1qmJ5uOauVNFATD8Y";

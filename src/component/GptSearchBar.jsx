@@ -58,7 +58,7 @@ const GptSearchBar = () => {
     // after maping on async function :- [promise, promise, promise, promise, promise, promise]
 
     // to Convert all the promise to the result we will be use Promise.all
-    const resolvedResult = Promise.all(promiseArray);
+    const resolvedResult = await Promise.all(promiseArray);
     console.log(resolvedResult);
 
     dispatch(

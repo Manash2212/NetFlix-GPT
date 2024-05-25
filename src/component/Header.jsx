@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Dropdown from "./Dropdown";
+import MoviesList from "./MoviesList";
 import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -7,7 +8,7 @@ import { addUser, removeUser } from "../Redux/userSlice";
 import { useNavigate } from "react-router-dom";
 import { NetflixLogo, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
-import { toggleGptSearchView } from "../Redux/gptSlice";
+import { addGptMovieResult, toggleGptSearchView } from "../Redux/gptSlice";
 import { changeLanguage } from "../Redux/configSlice";
 
 const Header = () => {
@@ -19,6 +20,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const buttonRef = useRef();
   useEffect(() => {
     //Reason of using UseEffect : - i want to call this function once.
     // Reaseon for using this onAuthStateChanged : - If any user Sign up then this Function will be called,
@@ -48,8 +50,12 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
-  const handleGptSearchToggle = () => {
+  const handleGptSearchToggle = (e) => {
     dispatch(toggleGptSearchView());
+    if (buttonRef.current.childNodes[0].data === "GPT Search") {
+      dispatch(addGptMovieResult({ movieNames: null, movieResult: null }));
+    }
+    console.log(buttonRef.current.childNodes[0].data);
   };
 
   const handleChangeLanguage = (e) => {
@@ -58,7 +64,7 @@ const Header = () => {
   };
 
   return (
-    <div className=" flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10 fixed text-center">
+    <div className=" flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10 fixed text-center ">
       <div className="img">
         <img className="w-44" src={NetflixLogo} alt="Netflix-logo" />
       </div>
@@ -82,6 +88,7 @@ const Header = () => {
           </select>
         )}
         <button
+          ref={buttonRef}
           className="bg-lightRed text-white py-2 px-4 mr-4 mt-2 font-bold rounded-lg"
           onClick={handleGptSearchToggle}
         >

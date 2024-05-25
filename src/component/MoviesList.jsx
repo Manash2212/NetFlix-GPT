@@ -13,9 +13,9 @@ const MoviesList = ({ title, movies }) => {
   };
 
   return (
-    <div className="p-4 ">
-      <h1 className="text-xl font-bold pl-8 pb-2 text-white">{title}</h1>
-      <div className="flex pl-8 ">
+    <div className="p-4  ">
+      <h1 className="text-xl font-bold pl-6 pb-2 text-white">{title}</h1>
+      <div className="">
         {/* <span className="text-[30px] text-white m-auto">
           <IoIosArrowBack
             onClick={sliderLeft}
@@ -26,18 +26,18 @@ const MoviesList = ({ title, movies }) => {
           id="slider"
           className="1 flex overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
         >
-          <div className=" flex gap-4   ">
+          <div className=" flex gap-4 ">
             {movies?.map((movie) => (
               <MoviesCard key={movie.id} poster_path={movie.poster_path} />
             ))}
           </div>
         </div>
-        <span className="text-[30px] text-white m-auto">
+        {/* <span className="text-[30px] text-white m-auto">
           <IoIosArrowForward
             onClick={sliderRight}
             className="cursor-pointer opacity-50 hover:opacity-100"
           />
-        </span>
+        </span> */}
       </div>
     </div>
   );
