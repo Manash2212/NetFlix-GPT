@@ -224,6 +224,15 @@
 #85 - and map on movieNames and Inside that i've reuse the component which is MovieList 
       and Learn what is reusable component.
 #86 - In MoviesCard some error handleing done, if Poster-path is not present then don't show. 
+      
+      🔰Part-24(Securing our API keys.)
+
+#87 - Securing our API keys for Security reasons, basically hidding the API key's from the website 
+      and Hacker also.
+#88 - First, create a new .env file and store all the API keys and Sensitive information.
+#89 - and also Before the Variable name write REACT_APP, like :- REACT_APP_TMDB_KEY=api-key.
+#90 - and use it in file with Like:- "proccess.env. REACT_APP_TMDB_KEY"  
+#91 - the Main thing is .env file should be store in .gitignore.
 
 
 
