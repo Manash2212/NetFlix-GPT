@@ -234,6 +234,11 @@
 #90 - and use it in file with Like:- "proccess.env. REACT_APP_TMDB_KEY"  
 #91 - the Main thing is .env file should be store in .gitignore.
 
+      🔰Part-25(Understanding Memoization of Data in Our Apps .)
+
+
+      🔰Part-26(Open AI usage Bill and Suggestions .)
+      
 
 
 
