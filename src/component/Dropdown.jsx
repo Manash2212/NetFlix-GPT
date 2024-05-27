@@ -26,27 +26,27 @@ const Dropdown = ({ leaveState }) => {
         className="bg-formBg text-white py-2 pr-2 "
         onMouseLeave={() => leaveState(false)}
       >
-        <li className=" hover:border-b-2 py-2 border-white w-full text-left flex gap-2 text-lg ">
-          <span className="text-xl pt-1">
+        <li className=" hover:border-b-2 py-2 border-white w-full text-left flex gap-2 text-sm md:text-lg ">
+          <span className="text-lg md:text-xl pt-1">
             <MdOutlineEdit />
           </span>
           <Link to="/masnh">Manage Profile</Link>
         </li>
-        <li className="mt-2 hover:border-b-2 py-2 border-white w-full text-left flex gap-2 text-lg">
-          <span className="text-xl pt-1">
+        <li className="mt-2 hover:border-b-2 py-2 border-white w-full text-left flex gap-2 text-sm md:text-lg">
+          <span className="text-lg md:text-xl pt-1">
             <IoPerson />
           </span>
           <Link to="/masnh">Account</Link>
         </li>
-        <li className="mt-2 hover:border-b-2 py-2 border-white w-full text-left flex gap-2 text-lg">
-          <span className="text-2xl pt-1">
+        <li className="mt-2 hover:border-b-2 py-2 border-white w-full text-left flex gap-2 text-sm md:text-lg">
+          <span className="text-xl md:text-2xl pt-1">
             <IoIosHelpCircleOutline />
           </span>
           <Link to="/masnh">Help Center</Link>
         </li>
         <li className="mt-2 w-full border-b border-lightGray"></li>
         <li
-          className="hover:border-b-2 border-netRed  w-full text-center pr-2 py-2  text-lg"
+          className="hover:border-b-2 border-netRed  w-full text-center pr-2 py-2  text-sm md:text-lg"
           onClick={handleSignOut}
         >
           Sign out

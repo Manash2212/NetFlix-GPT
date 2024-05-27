@@ -64,12 +64,16 @@ const Header = () => {
   };
 
   return (
-    <div className=" flex justify-between px-8 py-2 bg-gradient-to-b from-black w-full z-10 fixed text-center ">
+    <div className=" flex justify-between md:flex-row flex-col px-8 py-2 bg-gradient-to-b from-black w-full z-10 absolute top-0 text-center mt-0 ">
       <div className="img">
-        <img className="w-44" src={NetflixLogo} alt="Netflix-logo" />
+        <img
+          className="w-32 mx-auto md:m-0 md:w-44 "
+          src={NetflixLogo}
+          alt="Netflix-logo"
+        />
       </div>
 
-      <div className="flex items-center justify-center">
+      <div className="flex items-center md:justify-center justify-between text-sm md:text-lg">
         {showGptSearch && (
           <select
             className="p-[4px] mr-2 mt-2 rounded-md font-bold outline-none"
@@ -89,7 +93,7 @@ const Header = () => {
         )}
         <button
           ref={buttonRef}
-          className="bg-lightRed text-white py-2 px-4 mr-4 mt-2 font-bold rounded-lg"
+          className="bg-lightRed text-white py-1 px-2 md:py-2 md:px-4 mr-4 mt-2 font-bold rounded-lg"
           onClick={handleGptSearchToggle}
         >
           {showGptSearch ? "Home Page" : "GPT Search"}
@@ -97,11 +101,11 @@ const Header = () => {
         {MyUser && (
           <div className="">
             <button
-              className="btn pt-4 flex items-start justify-start gap-2"
+              className="btn pt-2 md:pt-4 flex items-start justify-start gap-2"
               onMouseEnter={() => setIsOpen(true)}
             >
               <img
-                className="w-8 h-8 rounded-md"
+                className="w-6 md:w-8   rounded-md"
                 src={MyUser.photoURL}
                 alt="Profile-img"
               />

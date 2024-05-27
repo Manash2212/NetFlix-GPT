@@ -14,7 +14,9 @@ const MoviesList = ({ title, movies }) => {
 
   return (
     <div className="p-4  ">
-      <h1 className="text-xl font-bold pl-6 pb-2 text-white">{title}</h1>
+      <h1 className="text-md md:text-xl font-bold pl-6 md:pl-0 pb-2 text-white">
+        {title}
+      </h1>
       <div className="">
         {/* <span className="text-[30px] text-white m-auto">
           <IoIosArrowBack
