@@ -99,14 +99,14 @@ const Login = () => {
       <Header />
       <div className="absolute ">
         <img
-          className="object-cover"
+          className="object-cover h-screen w-screen"
           src={Netflix_Background_IMG}
           alt="Netflix Background"
         />
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute bg-formBg rounded-md w-3/12 p-12 my-24 mx-auto right-0 left-0 "
+        className="absolute bg-formBg rounded-md w-3/12 p-8 my-24 mx-auto right-0 left-0 "
       >
         <h1 className="text-white text-[34px] font-bold">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -149,18 +149,12 @@ const Login = () => {
         <br />
         {isSignInForm && (
           <div className="isSignIn">
-            <p className="text-center text-white my-3">OR</p>
-            <button className="text-lg text-white py-2 rounded-md bg-grayTranse w-full">
-              Use a sign-in code
-            </button>
             <p className="text-white hover:underline my-4 text-center">
               <Link to="/">Forgot password?</Link>
             </p>
           </div>
         )}
 
-        <input type="checkbox" className="w-4 h-4 cursor-pointer" />
-        <span className="ml-4  text-white">Remember me</span>
         <h3 className="text-white my-5">
           {isSignInForm ? "New to Netflix?" : "Allready Registered!"}
           <span
@@ -169,13 +163,6 @@ const Login = () => {
           >
             <Link to="/">{isSignInForm ? "Sign up now." : "Sign in"}</Link>
           </span>{" "}
-        </h3>
-
-        <h3 className="text-white text-sm font-thin leading-4">
-          This page is protected by Google reCAPTCHA to ensure you're not a bot.
-          <span className="text-blue">
-            <Link to="/"> Learn more.</Link>
-          </span>
         </h3>
       </form>
       {/* <div className="absolute footer w-full h-[310px] bg-formBg bottom-0 top-full my-5">

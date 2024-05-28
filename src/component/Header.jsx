@@ -73,32 +73,33 @@ const Header = () => {
         />
       </div>
 
-      <div className="flex items-center md:justify-center justify-between text-sm md:text-lg">
-        {showGptSearch && (
-          <select
-            className="p-[4px] mr-2 mt-2 rounded-md font-bold outline-none"
-            onClick={handleChangeLanguage}
+      {MyUser && (
+        <div className="flex items-center md:justify-center justify-between text-sm md:text-lg">
+          {showGptSearch && (
+            <select
+              className="p-[4px] mr-2 mt-2 rounded-md font-bold outline-none"
+              onClick={handleChangeLanguage}
+            >
+              {SUPPORTED_LANGUAGES.map((item) => (
+                <option
+                  key={item.indentifier}
+                  value={item.indentifier}
+                  className=" font-bold"
+                  onClick={handleChangeLanguage}
+                >
+                  {item.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            ref={buttonRef}
+            className="bg-lightRed text-white py-1 px-2 md:py-2 md:px-4 mr-4 mt-2 font-bold rounded-lg"
+            onClick={handleGptSearchToggle}
           >
-            {SUPPORTED_LANGUAGES.map((item) => (
-              <option
-                key={item.indentifier}
-                value={item.indentifier}
-                className=" font-bold"
-                onClick={handleChangeLanguage}
-              >
-                {item.name}
-              </option>
-            ))}
-          </select>
-        )}
-        <button
-          ref={buttonRef}
-          className="bg-lightRed text-white py-1 px-2 md:py-2 md:px-4 mr-4 mt-2 font-bold rounded-lg"
-          onClick={handleGptSearchToggle}
-        >
-          {showGptSearch ? "Home Page" : "GPT Search"}
-        </button>
-        {MyUser && (
+            {showGptSearch ? "Home Page" : "GPT Search"}
+          </button>
+
           <div className="">
             <button
               className="btn pt-2 md:pt-4 flex items-start justify-start gap-2"
@@ -121,8 +122,8 @@ const Header = () => {
               {isOpen && <Dropdown leaveState={setIsOpen} />}
             </button>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
