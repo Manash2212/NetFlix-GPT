@@ -24,4 +24,6 @@ export const SUPPORTED_LANGUAGES = [
   { indentifier: "bengali", name: "Bengali" },
 ];
 
-export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+// export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
+export const OPENAI_KEY =
+  "sk-proj-TaYY83Bld1B0eY036moET3BlbkFJLXKNFb6jEe6D0BW7CTa4";
