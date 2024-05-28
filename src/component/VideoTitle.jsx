@@ -4,8 +4,8 @@ import { MdOutlineInfo } from "react-icons/md";
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className=" absolute aspect-video flex flex-col md:items-center justify-center items-start  bg-gradient-to-r from-formBg  w-full ">
-      <div className="children px-12 text-white ">
+    <div className=" absolute aspect-video flex flex-col md:pl-8 justify-center items-start  bg-gradient-to-r from-formBg  w-full ">
+      <div className="children px-4 md:px-2 text-white ">
         <h1 className="text-white text-[20px] md:text-[50px] font-bold  font-Fugaz mb-4">
           {title}
         </h1>

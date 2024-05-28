@@ -66,11 +66,11 @@ const GptSearchBar = () => {
     );
   };
   return (
-    <div className="bg-formBg rounded-lg    absolute md:top-[20%] top-[30%] md:left-[25%]  md:w-1/2 w-[90%] mx-5 md:mx-0">
+    <div className="bg-formBg rounded-lg absolute md:top-[20%] top-[30%] md:left-[25%]  md:w-1/2 w-[95%] mx-2 md:mx-0">
       <div className="">
         <form
           onClick={(e) => e.preventDefault()}
-          className=" mx-4 my-2 flex gap-2 justify-center items-center "
+          className=" mx-2 my-2 flex gap-2 justify-center items-center "
         >
           <input
             ref={searchInputData}

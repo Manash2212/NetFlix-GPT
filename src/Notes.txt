@@ -200,7 +200,8 @@
 
 #70 - Got the API key from the Open AI. and Store it to the utils. 
 #71 - Install Open AI Packages. 
-#72 - In the OpenAi npm library page there is describe the usage of the openai function, so i import the openai function and create a new utils file name: OpenAi.js and paste the function. 
+#72 - In the OpenAi npm library page there is describe the usage of the openai function, 
+      so i import the openai function and create a new utils file name: OpenAi.js and paste the function. 
 #73 - then set onClick even to search button and pass the handleGptSearch function.
 #74 - then get the input value using useRef and pass it to the handleGptSearch function.
 #75 - In handleGptSearch function pass the promise function which is present in the OpenAi npm library.
@@ -236,8 +237,6 @@
 
       🔰Part-25(Understanding Memoization of Data in Our Apps .)
 
-
-      🔰Part-26(Open AI usage Bill and Suggestions .)
       
       🔰Part-26(Responsiveness to our Application)
       

@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Dropdown from "./Dropdown";
-import MoviesList from "./MoviesList";
 import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -64,7 +63,7 @@ const Header = () => {
   };
 
   return (
-    <div className=" flex justify-between md:flex-row flex-col px-8 py-2 bg-gradient-to-b from-black w-full z-10 absolute top-0 text-center mt-0 ">
+    <div className=" flex justify-between md:flex-row flex-col px-4 py-2 bg-gradient-to-b from-black w-full z-10 absolute top-0 text-center mt-0 ">
       <div className="img">
         <img
           className="w-32 mx-auto md:m-0 md:w-44 "
